@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 //app.use(express.json());
 //app.use(express.urlencoded());
-app.use(app.router);
+//app.use(app.router);
 app.use(express.static('public'));
  
 
@@ -56,19 +56,23 @@ app.post('/data', function(req, res){
     if (err) throw err;
     console.log("connect");
   });
-
-   router.get('/', function (req, res,next) {
+});
+   app.get('/', function (req, res,next) {
 
     res.render('/index1.js');
 
+  }); 
 
+ 
     app.get('/', function(req, res) {
   con.query("SELECT * FROM CITY", function (err, result, fields) {
     if (err) throw err;
     console.log(result);
   res.render('/index1.html',{dropdownvals:result});
 
-   });
+});
+ 
+ });
 
 //connection.end();
 
