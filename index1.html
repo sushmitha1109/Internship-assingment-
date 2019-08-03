@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html>
+ <html lang="en"> 
+
 <head>
-
-	
-	<title>Lead Management 
-	</title>
+<meta charset="UTF-8"> 
+<title>Lead Management </title>
 </head>
-        <strong><h2>Trusted Home Painting Services in India-AAPKA PAINTER</h2></strong>
-
- 
-			<h2>LEAD DETAILS</h2>
+        
 	
   	<body>
 
   		<div class="header">
-        <h1>Inserting Form Data</h1>
-        <p>With Mysql</p>       
-    </div>
+        	<h1>Inserting Form Data</h1>
+        	<p>With Mysql</p>       
+    	</div>
 
   	
   	<form action="/data" method="post">
 		
 	<label>
 		USERNAME:
-		<p><input type="Name" name="name" ></p>
+		<p><input type="name" name="name" ></p>
 	</label>	
 	<label>
 		PHONE NO:
@@ -45,12 +41,18 @@
 		DOB:
 		<p><input type="DOB" name="DOB" ></p>
      </label>
-     <p>
-       <input type="submit" value="submit"/>
-    </p>
-    </form>
 
-       	<div class="container"></div>
+      <select class="form-control" id="sel1">
+      <% dropdownVal.foreach(function(dropdownVals){ %>
+         <option> <%= dropdownVals[i] %></option>
+         <%>}<%>
+      </select>
+
+     <input type="submit" value="submit"/>
+
+   </form>   
+
+    	<div class="container"></div>
        	
        	<script type="text/javascript" src="main.js"></script>
 </body>

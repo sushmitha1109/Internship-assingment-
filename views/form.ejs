@@ -1,0 +1,59 @@
+	<!DOCTYPE html>
+	 <html lang="en"> 
+	<head>
+	<meta charset="UTF-8"> 
+	  
+	  <script src=“https://ajax.googleapis.com…”></script>
+	<script src=“https://maxcdn.bootstrapcdn…”></script>
+
+	<title>Lead Management </title>
+	</head>
+	        <body>
+	        	<div class="header">
+	        	<h1>Inserting Form Data</h1>
+	        	<p>With Mysql</p>       
+	    	</div>
+
+	     <form action="/data" method="post">
+		 <label>
+			USERNAME:
+			<p><input type="name" name="name" ></p>
+		</label>	
+		<label>
+			PHONE NO:
+			<p><input type="Number" name="Number" ></p>
+		</label>
+		
+		<lable>
+			EMAIL:
+			<p><input type="Email" name="Email" ></p>
+		</lable>
+		
+		<label>
+			ADDRESS:
+			<p><input type="Address" name="Address"></p>
+		</label>
+		 <label>
+			DOB:
+			<p><input type="DOB" name="DOB" ></p>
+	     </label>
+
+	      <input type="submit" name="submit">
+
+	 </form>
+	<form action="/" method="GET">
+	       	<select>
+	      	<% dropdownvals.forEach(function(dropdownval){ %>
+	       		<option value="">
+	    		<%= dropdownval.City_name %>
+	    		</option>
+	        <% console.log(dropdownval.City_name)%>
+	  		<% })%>
+
+	     	 </select>
+	   
+	     </form>   
+	</body>
+	</html>
+
+
